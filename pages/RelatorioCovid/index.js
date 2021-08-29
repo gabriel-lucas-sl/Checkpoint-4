@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { FlatList, Text } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
 import {
@@ -14,7 +14,7 @@ import {
 } from './styles';
 import { RELATORIO_COVID } from '../../datas/relatorio-covid';
 
-const RegistroCovid = () => {
+const RegistroCovid = ({ navigation }) => {
   let countPostivies = 0, countNegatives = 0, countSuspects = 0;
   calculte();
 
@@ -37,7 +37,7 @@ const RegistroCovid = () => {
     const statusCovid = item.statusCovid;
     let statusColor = '';
 
-    if (statusCovid == 'suspeito') {
+    if (statusCovid == 'positivo') {
       statusColor = '#EC4646';
     } else if (statusCovid == 'negativo') {
       statusColor = '#80ED99';
@@ -46,7 +46,12 @@ const RegistroCovid = () => {
     }
 
     return(
-      <PatientInfo>
+      <PatientInfo
+        onPress={() => { navigation.navigate('RegistroDeAtendimento', {
+          item,
+          statusColor: statusColor,
+        }) }}
+      >
         <Header>
           <Text style={{ fontWeight: 'bold', fontSize: 18 }}>{item.name}</Text>
           <FontAwesome name="circle" size={12} color={statusColor} />
