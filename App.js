@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Relatorio from './pages/RelatorioCovidPage/relatorio';
+import { View } from 'react-native';
+import RelatorioCovid from './pages/RelatorioCovid/index';
 
 
 export default function App() {
   return (
     <View>
-      <Relatorio></Relatorio>
+      <RelatorioCovid />
       <StatusBar style="auto" />
     </View>
   );
