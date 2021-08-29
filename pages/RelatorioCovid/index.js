@@ -69,6 +69,7 @@ const RegistroCovid = ({ navigation }) => {
           renderItem={renderPatientBox}
           keyExtractor={ item => item.id }
           showsVerticalScrollIndicator={false}
+          style={{ marginTop: 10, marginBottom: 40 }}
         />
 
         <Footer>
