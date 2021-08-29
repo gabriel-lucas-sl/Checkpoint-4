@@ -150,5 +150,5 @@ export const RELATORIO_COVID = [
         symptoms: "diarreia, nauseas, falta de ar",
         preexistingDisease: "não há",
         statusCovid: "suspeito"
-    }
+    },
 ];

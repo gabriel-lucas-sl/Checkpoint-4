@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, View } from 'react-native';
+import { StatusBar } from 'react-native';
 import RelatorioCovid from './pages/RelatorioCovid/index';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -19,12 +19,18 @@ export default function App() {
               title: "Relatorio COVID-19",
               headerStyle: {
                 backgroundColor: '#3DB2FF',
+                textAlign: 'left'
+              },
+              headerTintColor: '#fff',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+                fontSize: 20,
               }
             }}
           />
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </>
   );
 }
