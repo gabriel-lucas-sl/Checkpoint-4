@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { View } from 'react-native';
+import { StatusBar, View } from 'react-native';
 import RelatorioCovid from './pages/RelatorioCovid/index';
 
 
